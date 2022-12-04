@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            }
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+</head>
+<body class="dark:bg-gray-900">
+    <nav class="bg-white shadow dark:bg-gray-800">
+        <div class="container flex items-center justify-center p-6 mx-auto text-gray-600 capitalize dark:text-gray-300">
+            <!-- img src/img/unp.png -->
+            <a href="/" class="">
+                <img class="w-auto h-9 sm:h-11" src="src/img/unp.png" alt="UNIVERSITAS PUTERA BATAM">
+            </a>
+            <a href="index.html" class="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6">Home</a>
+            
+            <a href="#" class="text-gray-800 transition-colors duration-300 transform dark:text-gray-200 border-b-2 border-blue-500 mx-1.5 sm:mx-6">Courses</a>
+    
+            <a href="about.html" class="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6">About</a>
+    
+            <a href="contact.html" class="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6">Contact</a>
+    
+            <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+            </button>
+        </div>
+    </nav>
+    <div class="text-center overflow-x-auto overflow-y-hidden border-gray-200 whitespace-nowrap dark:border-gray-700">
+        <button class="inline-flex items-center h-10 px-4 -mb-px text-sm text-center text-gray-700 bg-transparent border-b-2 border-transparent sm:text-base dark:text-white whitespace-nowrap cursor-base focus:outline-none hover:border-gray-400">
+            <a href="courses.html">BAB 1</a>
+        </button>
+    
+        <button class="inline-flex items-center h-10 px-4 -mb-px text-sm text-center text-gray-700 bg-transparent border-b-2 border-transparent sm:text-base dark:text-white whitespace-nowrap cursor-base focus:outline-none hover:border-gray-400">
+            <a href="bab1-1.html">BAB 1.1</a>
+        </button>
+    
+        <button class="inline-flex items-center h-10 px-4 -mb-px text-sm text-center text-gray-700 bg-transparent border-b-2 border-transparent sm:text-base dark:text-white whitespace-nowrap cursor-base focus:outline-none hover:border-gray-400">
+            <a href="bab1-2.html">BAB 1.2</a> 
+        </button>
+
+        <button class="inline-flex items-center h-10 px-4 -mb-px text-sm text-center text-blue-600 bg-transparent border-b-2 border-blue-500 sm:text-base dark:border-blue-400 dark:text-blue-300 whitespace-nowrap focus:outline-none">
+            BAB 1.3
+        </button>
+
+        <button class="inline-flex items-center h-10 px-4 -mb-px text-sm text-center text-gray-700 bg-transparent border-b-2 border-transparent sm:text-base dark:text-white whitespace-nowrap cursor-base focus:outline-none hover:border-gray-400">
+            <a href="bab1-4.html">BAB 1.4</a>
+        </button>
+        
+    </div>
+    <div class="container flex-wrap flex px-12 py-7 max-w-md mx-auto bg-slate-100 dark:bg-gray-800 rounded-xl shadow-md overflow-hidden md:max-w-7xl">
+        <!-- row -->
+        <h1 class="text-3xl font-semibold text-gray-800 dark:text-white lg:text-4xl whitespace-pre-line">1.3 PERANTI BANTU PENGEMBANG 
+            SISTEM</h1>
+            <!-- gambar src/img/com.png di kanan sebelah h1 -->
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                <p class="mt-4 text-gray-600 dark:text-gray-400 text-justify whitespace-pre-line">Salah satu kriteria yang harus dimiliki oleh sebuah perangkat lunak untuk mendapatkan predikat "ramah dengan pengguna" adalah bahwa perangkat lunak tersebut mempunyai antarmuka yang bagus, mudah dioperasikan, mudah dipelajari, dan pengguna selalu merasa senang untuk menggunakannya. Tetapi perlu disadari bahwa merancang antarmuka yang bagus merupakan pekerjaan yang sangat sukar. Semakin ramah antarmuka tersebut, semakin sukar untuk diimplementasikan.
+
+                    Kesulitan yang timbul dalam pengembangan fasilitas antarmuka dari sebuah perangkat lunak antara lain adalah bahwa antarmuka itu harus menangani sejumlah peranti kontrol, seperti papan ketik dan tetikus (mouse) - yang masing-masing dapat mengirimkan aliran data secara tak sinkron, sementara selera dan kebasaan pengguna sangat beragam. Selain itu, antar muka juga harus mempunyai kinerja yang ketat untu meyakinkan bahwa tidak terjadi keterlambatan antara tindakan pengguna dengan tanggapan sistem. oleh karena itu, pengembangan Antarmuka biasanya di lakukan dengan membuat purwarupa terlebih dahulu, dan baru kemudian di kembangkan sesuai dengan kebutuhan pengguna secara umum.
+                    
+                    Untuk mempercepat proses perancangan dan pengembangan antarmuka, perancang sering memanfaatkan peranti bantu pengembang sistem untarmuka. Sekitar pertengahan tabun 1980-an, MacApp dari Apple merupakan salah satu peranti bantu pengembang sistem antarmuka yang sukses dilihat dari berkurangnya waktu pengembangan yang sampai empat atau lima kali. Dewasa ini, dengan semakin banyaknya kompiler pemrograman Visual. terutama yang berbasis pada .NET, seperti Visual Cit, maupun yang lain, kita dapat mengembangkan sebuah program aplikasi sekaligus dengan antarmuka berbasis grafis yang sangat luwes dan mudah untuk dikembangkan. Untuk aplikasi berbasis Web, Front Page dan Dreamweaver merupakan dua program bantu, di antara sekian banyak program bantu, yang dapat mendukung pembuatan purwarupa secara cepat. Selain itu, sejumlah peranti masukan, seperti tetikus, sudah merupakan peranti masukan standar seperti halnya papan ketik, sehingga saat ini kita tidak direpotkan lagi dengan berbagai usaha yang diperlukan untuk menangani berbagai peranti masukan.</p>
+                <p class="mt-4 text-gray-600 dark:text-gray-400 text-justify whitespace-pre-line">Penggunaan peranti bantu untuk mengembangkan antarmuka mempunyai keuntungan antara lain:
+
+                    1. Antarmuka yang dihasilkan menjadi lebih baik:
+                    ‎ ‎ a. Hasil rancangan sementara segera dapat dibuatkan purwarupanya atau diimplementasikan secara penuh, bahkan sebelum aplikasinya ditulis.
+                    ‎ ‎ b. Perubahan yang diinginkan pengguna dapat segera dilakukan karena antarmukanya mudah dimodifikasi.
+                    ‎ ‎ ‎ c. Sebuah aplikasi dapat mempunyai lebih dari sebuah Antarmuka.
+                    ‎ ‎ d. Sejumlah aplikasi yang berbeda dapat mempunyai antarmuka yang konsisten, karena mereka dibangun dengan menggunakan peranti bantu yang sama.
+                    ‎ ‎ e. Memberikan "wajah” yang unik dan sentuhan khusus kepada program aplikasi yang akan dibangun.
+                    ‎ ‎ f. Memungkinkan sejumlah ahli bekerja bersama untuk memberikan kontribusinya masing-masing, misalnya ahli grafis, psikolog, ahli kognitif, maupun spesialis human factor.
+
+                    2. Program antarmuka menjadi mudah ditulis dan lebih ekonomis untuk dipelihara:
+                    ‎ ‎ a. Program antarmuka menjadi lebih terstruktur dan lebih modular karena sudah dipisahkan dari aplikasinya. Hal ini memungkinkan pengguna untuk mengubah antarmuka tanpa mempengaruhi aplikasinya, dan memungkinkan pemrogram untuk mengubah program aplikasi tanpa mengubah antarmukanya.
+                    ‎ ‎ b. Program antarmuka lebih bersifat dapat-digunakan-kembali (reusable) karena peranti bantu menggabungkan bagian-bagian yang sama.
+                    ‎ ‎ c. Kehandalan antarmuka menjadi lebih tinggi, karena program iłu dibangkitkan secara otomatis dari tingkat spesifikasi yang lebih tinggi.
+                    ‎ ‎ d. Spesifikasi antarmuka menjadi lebih mudah diungkapkan, divalidasi, dievaluasi, dan dimodifikasi.
+                    ‎ ‎ e. Ketergantungan peranti diisolasi di dałam peranti bantu sehingga antarmukanya lebih mudah di-port ke berbagai aplikasi pada lingkungan yang berbeda.</p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    
+    <script>
+        var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        // Change the icons inside the button based on previous settings
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        var themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+
+            // toggle icons inside button
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            // if set via local storage previously
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+
+            // if NOT set via local storage previously
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+            
+        });
+    </script>
+
+
+    <footer class="fixed bottom-0 left-0 z-20 p-4 w-full bg-blue-100 shadow dark:bg-gray-800 text-center">
+        <p class="text-sm text-gray-600 dark:text-gray-300 items-center">© Copyright 2022. Stefven Zang.</p>
+    </footer>
+</body>
+</html>
